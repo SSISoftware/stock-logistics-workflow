@@ -78,9 +78,9 @@ class StockBatchPicking(models.Model):
 
     move_line_ids = fields.One2many(
         'stock.move.line',
-        readonly=True,
         string='Related pack operations',
-        compute='_compute_move_line_ids'
+        compute='_compute_move_line_ids',
+        inverse=lambda self: self,
     )
 
     entire_package_ids = fields.One2many(
