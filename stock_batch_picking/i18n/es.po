@@ -268,12 +268,12 @@ msgstr ""
 #. module: stock_batch_picking
 #: model:ir.actions.server,name:stock_batch_picking.action_print_batch_delivery_slip
 msgid "Print Delivery Slip"
-msgstr ""
+msgstr "Imprimir albaranes de entrega"
 
 #. module: stock_batch_picking
 #: model:ir.actions.server,name:stock_batch_picking.action_print_batch_picking_operations
 msgid "Print Picking Operations"
-msgstr ""
+msgstr "Imprimir operaciones de albarán"
 
 #. module: stock_batch_picking
 #: model:ir.model,name:stock_batch_picking.model_product_product
@@ -310,17 +310,17 @@ msgstr ""
 #: model:ir.actions.server,name:stock_batch_picking.action_stock_batch_picking_assign_all
 #: model:ir.ui.view,arch_db:stock_batch_picking.stock_batch_picking_form
 msgid "Reserve All"
-msgstr ""
+msgstr "Reservar todos"
 
 #. module: stock_batch_picking
 #: model:ir.ui.view,arch_db:stock_batch_picking.stock_batch_picking_form
 msgid "Reserved"
-msgstr ""
+msgstr "Reservado"
 
 #. module: stock_batch_picking
 #: model:ir.actions.server,name:stock_batch_picking.action_batch_show_picking
 msgid "Show Pickings"
-msgstr ""
+msgstr "Mostrar albaranes"
 
 #. module: stock_batch_picking
 #: model:ir.model.fields,field_description:stock_batch_picking.field_stock_batch_picking_state
@@ -343,20 +343,20 @@ msgstr ""
 #: code:addons/stock_batch_picking/models/stock_batch_picking.py:132
 #, python-format
 msgid "These Batches have no pickings"
-msgstr ""
+msgstr "Esos grupos no tienen albaranes"
 
 #. module: stock_batch_picking
 #: code:addons/stock_batch_picking/models/stock_batch_picking.py:130
 #, python-format
 msgid "This Batch has no pickings"
-msgstr ""
+msgstr "Este grupo no tiene albaranes"
 
 #. module: stock_batch_picking
 #: model:ir.model.fields,help:stock_batch_picking.field_stock_batch_picking_entire_package_detail_ids
 msgid ""
 "Those are the entire packages of a picking shown in the view of detailed "
 "operations"
-msgstr ""
+msgstr "Operaciones"
 
 #. module: stock_batch_picking
 #: model:ir.model.fields,help:stock_batch_picking.field_stock_batch_picking_entire_package_ids
@@ -372,22 +372,22 @@ msgstr "Transferir"
 #. module: stock_batch_picking
 #: model:ir.ui.view,arch_db:stock_batch_picking.stock_batch_picking_search
 msgid "Unassigned"
-msgstr ""
+msgstr "No asignado"
 
 #. module: stock_batch_picking
 #: model:ir.ui.view,arch_db:stock_batch_picking.stock_batch_picking_form
 msgid "Unit of Measure"
-msgstr ""
+msgstr "Unidad de medida"
 
 #. module: stock_batch_picking
 #: model:ir.ui.view,arch_db:stock_batch_picking.stock_batch_picking_form
 msgid "Validate"
-msgstr ""
+msgstr "Validar"
 
 #. module: stock_batch_picking
 #: model:ir.ui.view,arch_db:stock_batch_picking.report_batch_picking
 msgid "Visa:_________________"
-msgstr ""
+msgstr "Firmado:__________________ "
 
 #. module: stock_batch_picking
 #: model:ir.model,name:stock_batch_picking.model_stock_warehouse
@@ -398,7 +398,7 @@ msgstr "Almacén"
 #: model:ir.model.fields,field_description:stock_batch_picking.field_product_product_description_warehouse
 #: model:ir.ui.view,arch_db:stock_batch_picking.product_normal_form_view
 msgid "Warehouse Description"
-msgstr ""
+msgstr "Descripción del almacén"
 
 #. module: stock_batch_picking
 #: model:ir.ui.view,arch_db:stock_batch_picking.view_create_batch_picking
@@ -414,7 +414,7 @@ msgstr ""
 #: model:ir.model.fields,help:stock_batch_picking.field_stock_batch_picking_creator_notes
 #: model:ir.model.fields,help:stock_batch_picking.field_stock_batch_picking_notes
 msgid "free form remarks"
-msgstr ""
+msgstr "Notas"
 
 #. module: stock_batch_picking
 #: model:ir.model,name:stock_batch_picking.model_report_stock_batch_picking_report_batch_picking
@@ -436,9 +436,9 @@ msgstr ""
 #. module: stock_batch_picking
 #: model:ir.model.fields,help:stock_batch_picking.field_stock_warehouse_default_picker_id
 msgid "the user to which the batch pickings are assigned by default"
-msgstr ""
+msgstr "usuario al que se asignan los grupos por defecto"
 
 #. module: stock_batch_picking
 #: model:ir.model.fields,help:stock_batch_picking.field_stock_batch_picking_picker_id
 msgid "the user to which the pickings are assigned"
-msgstr ""
+msgstr "Usuario al que se asignan los albaranes"
