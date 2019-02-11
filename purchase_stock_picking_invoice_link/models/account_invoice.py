@@ -24,11 +24,15 @@ class AccountInvoice(models.Model):
         invoice._update_picking_invoices()
         return invoice
 
-    @api.onchange('purchase_id')
-    def purchase_order_change(self):
-        res = super().purchase_order_change()
-        self._update_picking_invoices()
-        return res
+    @api.multi
+    def _prepare_invoice_line_from_po_line(self, line):
+        vals = super()._prepare_invoice_line_from_po_line(line)
+        moves = self.env['stock.move'].search([
+            ('purchase_line_id', '=', line.id),
+        ])
+        move_ids = moves._get_moves()
+        vals['move_line_ids'] = [(6, 0, move_ids.ids)]
+        return vals
 
 
 class AccountInvoiceLine(models.Model):
@@ -42,12 +46,6 @@ class AccountInvoiceLine(models.Model):
         moves = self.env['stock.move'].search([
             ('purchase_line_id', '=', line.purchase_line_id.id),
         ])
-        move_ids = moves.filtered(
-            lambda x: x.state == 'done' and
-            not x.scrapped and (
-                x.location_id.usage == 'supplier' or
-                (x.location_dest_id.usage == 'customer' and
-                 x.to_refund)
-            ))
+        move_ids = moves._get_moves()
         move_ids.write({'invoice_line_id': line.id})
         return line
